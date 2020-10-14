@@ -2,10 +2,11 @@ import React from 'react';
 import styles from './video_item.module.css'
 
 // props.video.snippet ~~ 인데 아래 방식으로 {video: {snippet}}으로 사용 가능.
-const VideoItem = ({video: {snippet}}) => {
+const VideoItem = ({video,video: {snippet},onVideoClick,display}) => {
+    const displayType= display === 'list' ? styles.list : styles.grid;
     return (
-        <li className={styles.container}>
-            <div className={styles.video}>
+        <li className={`${styles.container} ${displayType}`} onClick={()=> onVideoClick(video)}>
+            <div className={styles.video} >
                 <img  
                     className={styles.thumbnail} 
                     src={snippet.thumbnails.medium.url} 
