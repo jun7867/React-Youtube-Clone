@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { useRef } from 'react';
-import { useState ,useEffect} from 'react';
 import styles from './video_search.module.css';
 
 const VideoSearch = (props) => {

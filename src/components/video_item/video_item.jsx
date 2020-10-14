@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styles from './video_item.module.css'
 
 // props.video.snippet ~~ 인데 아래 방식으로 {video: {snippet}}으로 사용 가능.
