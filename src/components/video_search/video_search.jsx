@@ -1,8 +1,8 @@
-import React from "react";
+import React, { memo } from "react";
 import { useRef } from "react";
 import styles from "./video_search.module.css";
 
-const VideoSearch = ({ onSearch, onLogoClick }) => {
+const VideoSearch = memo(({ onSearch, onLogoClick }) => {
   const inputRef = useRef();
   const btnRef = React.createRef();
 
@@ -10,7 +10,7 @@ const VideoSearch = ({ onSearch, onLogoClick }) => {
     const keyword = inputRef.current.value;
     keyword && onSearch(keyword);
   };
-  const onClick = (event) => {
+  const onClick = () => {
     handleSearch();
   };
 
@@ -19,7 +19,6 @@ const VideoSearch = ({ onSearch, onLogoClick }) => {
       handleSearch();
     }
   };
-
   return (
     <header className={styles.box}>
       <img
@@ -52,6 +51,6 @@ const VideoSearch = ({ onSearch, onLogoClick }) => {
       </button>
     </header>
   );
-};
+});
 
 export default VideoSearch;
