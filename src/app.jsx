@@ -5,7 +5,7 @@ import styles from "./app.module.css";
 import VideoDetail from "./components/video_detail/video_detail";
 import VideoList from "./components/video_list/video_list";
 import Search from "./components/video_search/video_search";
-import axios from "axios";
+
 function App({ youtube }) {
   const [videos, setVideos] = useState([]);
   const [selectedVideo, setSelectedVideo] = useState(null);
@@ -43,7 +43,7 @@ function App({ youtube }) {
       <section className={styles.content}>
         {selectedVideo && (
           <div className={styles.detail}>
-            <VideoDetail video={selectedVideo} />
+            <VideoDetail video={selectedVideo} onSearch={search} />
           </div>
         )}
 

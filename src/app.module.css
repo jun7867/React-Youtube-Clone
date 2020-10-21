@@ -7,9 +7,20 @@
 }
 
 .detail {
-  flex: 1 1 70%;
+  /* width: 55rem; */
+  flex: 1 1 65%;
 }
 
 .list {
+  /* width: 20rem; */
   flex: 1 1 30%;
+}
+
+@media screen and (max-width: 48rem) {
+  .content {
+    flex-direction: column;
+  }
+  .list {
+    width: 100%;
+  }
 }

@@ -5,6 +5,7 @@ import styles from "./video_item.module.css";
 const VideoItem = memo(
   ({ video, video: { snippet }, onVideoClick, display }) => {
     const displayType = display === "list" ? styles.list : styles.grid;
+    const thumType = display === "list" ? styles.thum_list : styles.thum_grid;
     return (
       <li
         className={`${styles.container} ${displayType}`}
@@ -12,7 +13,7 @@ const VideoItem = memo(
       >
         <div className={styles.video}>
           <img
-            className={styles.thumbnail}
+            className={`${styles.thumbnail} ${thumType}`}
             src={snippet.thumbnails.medium.url}
             alt="video thumbnail"
           ></img>
