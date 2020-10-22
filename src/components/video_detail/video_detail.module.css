@@ -1,6 +1,9 @@
+li {
+  list-style: none;
+}
+
 .detail {
-  padding-right: 0.15em;
-  padding-top: 0.15em;
+  padding: 1em;
 }
 
 .description {
@@ -25,4 +28,33 @@
 
 .channel {
   margin: 0.1em 0.2em;
+}
+
+.statistic {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.5px solid lightgrey;
+}
+
+.static__left {
+  display: flex;
+  flex-direction: row;
+  font-size: 0.9em;
+}
+
+.actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.action {
+  margin-left: 0.2em;
 }
