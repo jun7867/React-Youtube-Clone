@@ -58,9 +58,7 @@ const VideoDetail = memo(({ video, video: { snippet }, onSearch }) => {
         allowFullScreen
       ></iframe>
       <ul className={styles.ul}>
-        {snippet.tags.map((tag, index) => tagAdd(tag, index))}
-        {/* {items && items.map((tag, index) => tagAdd(tag, index))} */}
-        {/* {items && `${snippet.tags.map((tag, index) => tagAdd(tag, index))}`} */}
+        {snippet.tags && snippet.tags.map((tag, index) => tagAdd(tag, index))}
       </ul>
       <h2 className={styles.title}>{snippet.title}</h2>
       <div className={styles.statistic}>
