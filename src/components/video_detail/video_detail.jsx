@@ -72,8 +72,8 @@ const VideoDetail = memo(({ video, video: { snippet }, onSearch }) => {
           <ul className={styles.actions}>
             <li>
               <button>
-                <i className="active fas fa-thumbs-up"></i>
-                <span className={styles.action}>
+                <i className="fas fa-thumbs-up"></i>
+                <span className={styles.action} className={styles.like}>
                   {convertNumber(`${video.statistics.likeCount}`)}
                 </span>
               </button>
@@ -81,7 +81,7 @@ const VideoDetail = memo(({ video, video: { snippet }, onSearch }) => {
             <li>
               <button>
                 <i className="fas fa-thumbs-down"></i>
-                <span className={styles.action}>
+                <span className={styles.action} className={styles.dislike}>
                   {convertNumber(`${video.statistics.dislikeCount}`)}
                 </span>
               </button>

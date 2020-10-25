@@ -24,3 +24,9 @@
     width: 100%;
   }
 }
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .app {
+    max-width: 72rem;
+  }
+}
