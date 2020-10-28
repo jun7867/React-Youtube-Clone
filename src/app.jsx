@@ -8,6 +8,7 @@ import Search from "./components/video_search/video_search";
 
 function App({ youtube }) {
   const [videos, setVideos] = useState([]);
+  const [temp, setTemp] = useState([]);
   const [selectedVideo, setSelectedVideo] = useState(null);
 
   const logoClick = useCallback(() => {
@@ -20,17 +21,30 @@ function App({ youtube }) {
     setSelectedVideo(video);
   };
 
-  //useCallback을 쓰는 이유는 memo를 써도 props가 발생하기에 rerender가 된다.
+  // useCallback을 쓰는 이유는 memo를 써도 props가 발생하기에 rerender가 된다.
   // 이를 방지하고자 useCallback을 써서 바뀔때만 render되게 한다.
   const search = useCallback(
     (query) => {
       setSelectedVideo(null);
       youtube
         .search(query) //
+        .then((videos) =>
+          videos.map((video) => youtube.search_statistic(video.id))
+        )
+        .then((videos) => Promise.all(videos))
         .then((videos) => setVideos(videos));
     },
     [youtube]
   );
+  // const search = useCallback(
+  //   (query) => {
+  //     setSelectedVideo(null);
+  //     youtube
+  //       .search(query) //
+  //       .then((videos) => console.log(videos), setVideos(videos));
+  //   },
+  //   [youtube]
+  // );
 
   useEffect(() => {
     youtube.mostPopular().then((videos) => setVideos(videos));
