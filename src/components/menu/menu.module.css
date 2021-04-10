@@ -1,0 +1,28 @@
+.container {
+  background-color: #202020;
+  color: #ffffff;
+  position: sticky;
+  margin: 0;
+  padding: 0;
+  width: 5rem;
+  /* height: 100%; */
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.button {
+  font-size: 1.4rem;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 54rem) {
+  .container {
+    display: none;
+  }
+}

@@ -1,14 +1,14 @@
-import React from "react";
-import { useCallback } from "react";
-import { useState, useEffect } from "react";
-import styles from "./app.module.css";
-import VideoDetail from "./components/video_detail/video_detail";
-import VideoList from "./components/video_list/video_list";
-import Search from "./components/video_search/video_search";
+import React from 'react';
+import { useCallback } from 'react';
+import { useState, useEffect } from 'react';
+import styles from './app.module.css';
+import Menu from './components/menu/menu';
+import VideoDetail from './components/video_detail/video_detail';
+import VideoList from './components/video_list/video_list';
+import Search from './components/video_search/video_search';
 
 function App({ youtube }) {
   const [videos, setVideos] = useState([]);
-  const [temp, setTemp] = useState([]);
   const [selectedVideo, setSelectedVideo] = useState(null);
 
   const logoClick = useCallback(() => {
@@ -28,9 +28,7 @@ function App({ youtube }) {
       setSelectedVideo(null);
       youtube
         .search(query) //
-        .then((videos) =>
-          videos.map((video) => youtube.search_statistic(video.id))
-        )
+        .then((videos) => videos.map((video) => youtube.search_statistic(video.id)))
         .then((videos) => Promise.all(videos))
         .then((videos) => setVideos(videos));
     },
@@ -53,8 +51,8 @@ function App({ youtube }) {
   return (
     <div className={styles.app}>
       <Search onSearch={search} onLogoClick={logoClick} />
-
       <section className={styles.content}>
+        <Menu />
         {selectedVideo && (
           <div className={styles.detail}>
             <VideoDetail video={selectedVideo} onSearch={search} />
@@ -62,11 +60,7 @@ function App({ youtube }) {
         )}
 
         <div className={styles.list}>
-          <VideoList
-            videos={videos}
-            onVideoClick={selectVideo}
-            display={selectedVideo ? "list" : "grid"}
-          />
+          <VideoList videos={videos} onVideoClick={selectVideo} display={selectedVideo ? 'list' : 'grid'} />
         </div>
       </section>
     </div>

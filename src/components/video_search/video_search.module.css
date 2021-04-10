@@ -1,9 +1,16 @@
 .box {
   display: flex;
   align-items: center;
-  background-color: black;
+  background-color: #202020;
   padding: 0.4em;
 }
+
+.menu_btn {
+  color: #ffffff;
+  font-size: 1.6rem;
+  margin: 20px;
+}
+
 .logo {
   margin-left: 0.4em;
   margin-right: 0.5em;
@@ -27,7 +34,7 @@
 .searchBtn {
   height: 13.5em;
   width: 24em;
-  background-color: darkgray;
+  background-color: #323232;
   color: white;
   font-size: 0.2em;
   outline: 0;

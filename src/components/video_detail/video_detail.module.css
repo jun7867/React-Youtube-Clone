@@ -4,6 +4,7 @@ li {
 
 .detail {
   padding: 1em;
+  color: #ffffff;
 }
 
 .description {
@@ -17,7 +18,7 @@ li {
 }
 .tag {
   list-style: none;
-  color: #065fd4;
+  color: #3ea6ff;
   font-size: 14px;
   margin-right: 0.8em;
   cursor: pointer;
@@ -36,6 +37,7 @@ li {
   justify-content: space-between;
   align-items: center;
   border-bottom: 0.5px solid lightgrey;
+  color: #909090;
 }
 
 .static__left {
@@ -53,6 +55,7 @@ button {
   border: none;
   background-color: transparent;
   cursor: pointer;
+  color: #909090;
 }
 
 .action {

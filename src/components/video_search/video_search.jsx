@@ -1,6 +1,6 @@
-import React, { memo } from "react";
-import { useRef } from "react";
-import styles from "./video_search.module.css";
+import React, { memo } from 'react';
+import { useRef } from 'react';
+import styles from './video_search.module.css';
 
 const VideoSearch = memo(({ onSearch, onLogoClick }) => {
   const inputRef = useRef();
@@ -15,39 +15,22 @@ const VideoSearch = memo(({ onSearch, onLogoClick }) => {
   };
 
   const onKeyPress = (event) => {
-    if (event.key === "Enter") {
+    if (event.key === 'Enter') {
       handleSearch();
     }
   };
   return (
     <header className={styles.box}>
-      <img
-        className={styles.logo}
-        src="/images/logo.png"
-        alt="logo"
-        onClick={onLogoClick}
-      ></img>
+      <button className={styles.menu_btn}>
+        <i className="fas fa-bars"></i>
+      </button>
+      <img className={styles.logo} src="/images/logo.png" alt="logo" onClick={onLogoClick}></img>
       <span className={styles.name} onClick={onLogoClick}>
         Youtube
       </span>
-      <input
-        className={styles.input}
-        type="search"
-        ref={inputRef}
-        placeholder="Search.."
-        onKeyPress={onKeyPress}
-      ></input>
-      <button
-        ref={btnRef}
-        className={styles.searchBtn}
-        type="submit"
-        onClick={onClick}
-      >
-        <img
-          className={styles.search}
-          src="/images/search.png"
-          alt="search"
-        ></img>
+      <input className={styles.input} type="search" ref={inputRef} placeholder="검색" onKeyPress={onKeyPress}></input>
+      <button ref={btnRef} className={styles.searchBtn} type="submit" onClick={onClick}>
+        <img className={styles.search} src="/images/search.png" alt="search"></img>
       </button>
     </header>
   );
