@@ -6,7 +6,7 @@
 
 - React에 대한 이해를 하기 위한 실전 연습 프로젝트 진행
 - React hook 사용 연습
-- Open API를 사용에 대한 연습
+- Open API 사용에 대한 연습 (Fetch , Axios)
 
 
 
@@ -14,9 +14,8 @@
 
 - React hook
 - React Memo
-- Youtube API
-- env
-- MVC pattern
+- Youtube API (Search, Playlist, Statistic API 사용)
+- MVC pattern (.env 사용 API Key 숨기기)
 - netlify build
 
 
@@ -33,7 +32,7 @@
 ### 1. Most Popular 25개 Youtube API 사용해서 받아오기
 - 메인페이지에 받아온 동영상 정보 보여주기
 
-### 2. Search API 사용해서 검색 쿼리에 따른 25개 동영상 받아오기
+### 2. Search API 사용해서 검색 쿼리에 따른 동영상 받아오기
 - 사용자가 입력창에 입력한 키워드를 이용해서 쿼리 이용
 
 ### 3. Statistics API 받아와서 조회수, 좋아요, 싫어요 수 표시하기
