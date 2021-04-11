@@ -20,11 +20,11 @@
 
 
 ### 링크
-[사이트 접속하기](https://5f9994922dab600e799afc64--react-youtube-jun.netlify.app)
+[사이트 접속하기](https://607307db07b36acbc89da746--react-youtube-jun.netlify.app/)
 
 ## Demo
 
-![Alt Text](https://github.com/jun7867/React-Youtube-Clone/blob/master/demo.gif)
+![Alt Text](https://github.com/jun7867/React-Youtube-Clone/blob/master/newDemo.gif)
 
 
 ## 기능
