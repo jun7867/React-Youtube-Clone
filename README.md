@@ -29,7 +29,7 @@
 
 ## 기능
 
-### 1. Most Popular 25개 Youtube API 사용해서 받아오기
+### 1. Most Popular 48개 Youtube API 사용해서 받아오기
 - 메인페이지에 받아온 동영상 정보 보여주기
 
 ### 2. Search API 사용해서 검색 쿼리에 따른 동영상 받아오기
